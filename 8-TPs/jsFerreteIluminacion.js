@@ -18,6 +18,8 @@ function CalcularPrecio ()
 	var precioConDescuento;
 	var precioFinal;
 	var marca;
+	var iibb;
+
 
 	cantidad=document.getElementById('Cantidad').value;	
  	cantidad=parseInt(cantidad);
@@ -70,13 +72,24 @@ function CalcularPrecio ()
  				break;
  				default:
  					precioConDescuento=precioXcantidad*0.7;
- 				}
- 		break ;		
+ 				}		
  		default :
- 			precioDescuento=precioXcantidad*0.5;
+ 			precioConDescuento=precioXcantidad*0.5;
  		
 
  		}
+
+	switch(true){
+		case precioConDescuento>100:
+			iibb = precioConDescuento*0.1;
+			precioConDescuento=precioConDescuento+iibb;
+			alert("”Usted pagos "+iibb+" de impuestos.");
+			break;
+		default:
+
+
+
+	} 		
 
 
 
