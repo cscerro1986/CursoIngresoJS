@@ -19,19 +19,25 @@ function mostrar()
 		numero= prompt("ingrese un numero");
 		numero=parseInt(numero);
 
-		if (numero>maximo) {
+		/*while(isnan(num)){
+		numero =prompt("ingrese un numero");
+		numero=parseInt(numero1);// si ingresa un numero me va a tirar Nan!! 
+		}
+		*/
+		
+
+
+		if (numero>maximo){
 
 			maximo=numero;
 
 
-		}else if (numero<minimo) {
+		}else if (numero<minimo) 
+
+		{
 
 			minimo=numero;
 		}
-
-
-
-
 
 
 		respuesta = prompt("Desea continuar?");
